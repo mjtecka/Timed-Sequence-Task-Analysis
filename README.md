@@ -6,6 +6,18 @@ Operant boxes code and data are provided separately.
 
 Code is licensed under FreeBSD license. 
 
+## How to run the scripts
+1) download scripts
+2) download the original data from [dataset_DOI_]
+
+3) add original data into data directory (./data/original_data) 
+   - mastersheet_complete_one_file.csv, data_vpa_final.csv (default)
+4) run mastersheet_matcher.py
+   - mastersheet_matcher will create separate log files for all tasks, using mastersheet_complete_one_file.csv and data_vpa_final.csv 
+5) run analyzer.py 
+   - analyzer will create specified subanalyses data in ./data/subanalysis_results directory
+
+
 ## Scripts:
 
 ### mastersheet_matcher.py
@@ -81,15 +93,3 @@ analyze_response_codes_per_interval_incremental(t, correct_presses+incorrect_pre
 analyze_response_codes_per_interval_incremental(t, ["2"], "reinforcement")
 -  incrementaly look for reinforcements and put them into "buckets" by trial
 
-
-
-## How to run the scripts
-1) download scripts
-2) download the original data from [dataset_DOI_]
-
-3) add original data into data directory (./data/original_data) 
-   - mastersheet_complete_one_file.csv, data_vpa_final.csv (default)
-4) run mastersheet_matcher.py
-   - mastersheet_matcher will create separate log files for all tasks, using mastersheet_complete_one_file.csv and data_vpa_final.csv 
-5) run analyzer.py 
-   - analyzer will create specified subanalyses data in ./data/subanalysis_results directory
